@@ -1,4 +1,4 @@
-package br.com.tech;
+package br.com.tech.polimorfirsmo;
 
 public interface Printer {
 
