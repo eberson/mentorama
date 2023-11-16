@@ -1,0 +1,6 @@
+db:
+  host: #defined at task definition
+  port: #defined at task definition
+  schema: agenda
+  username: #defined at task definition
+  password: #defined at task definition

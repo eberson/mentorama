@@ -1,0 +1,9 @@
+db:
+  host: localhost
+  port: 3306
+  schema: agenda
+  username: mentorama
+  password: m3nt0r4m4
+
+server:
+  port: 8099
