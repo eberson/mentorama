@@ -1,5 +1,5 @@
 create table contact(
-    id bigint not null primary key,
+    id bigint not null auto_increment primary key,
     uuid varchar(50) not null unique,
     name varchar(200) not null,
     email varchar(200),
