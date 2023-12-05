@@ -5,3 +5,8 @@ spring:
     url: jdbc:mysql://${db.host}:${db.port}/${db.schema}
     username: ${db.username}
     password: ${db.password}
+
+springdoc:
+  swagger-ui:
+    path: /doc
+    url: /v3/api-docs.yaml

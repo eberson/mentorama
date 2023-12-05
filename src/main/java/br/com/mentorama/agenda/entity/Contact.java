@@ -1,5 +1,6 @@
 package br.com.mentorama.agenda.entity;
 
+import com.querydsl.core.annotations.QueryEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -23,6 +24,7 @@ import java.util.UUID;
 @Entity
 @Table
 @EntityListeners(AuditingEntityListener.class)
+@QueryEntity
 public class Contact {
 
     @Id
