@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  database:
+    image: mysql:8.0
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: xpto123
+    volumes:
+      - ./setup/setup.sql:/docker-entrypoint-initdb.d/1.sql
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    networks:
+      - agenda
+
+  app:
+    image: mariafumiga/agenda
+    platform: linux/amd64
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_USERNAME: mentorama
+      DB_PASSWORD: m3nt0r4m4
+    ports:
+      - "8080:8080"
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - agenda
+
+networks:
+  agenda:
+    driver: bridge

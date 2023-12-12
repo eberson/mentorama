@@ -1,7 +1,6 @@
 package br.com.mentorama.agenda.service;
 
 import br.com.mentorama.agenda.dto.ContactDTO;
-import br.com.mentorama.agenda.dto.CreateContactDTO;
 import br.com.mentorama.agenda.dto.UpdateContactDTO;
 import br.com.mentorama.agenda.mapper.ContactMapper;
 import br.com.mentorama.agenda.repository.ContactRepository;

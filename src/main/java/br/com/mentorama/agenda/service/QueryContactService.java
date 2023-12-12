@@ -4,15 +4,12 @@ import br.com.mentorama.agenda.dto.ContactDTO;
 import br.com.mentorama.agenda.entity.QContact;
 import br.com.mentorama.agenda.mapper.ContactMapper;
 import br.com.mentorama.agenda.repository.ContactRepository;
-import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 @Service
